@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Far Can Coding Agents Go in Visual Generation?</title>
+<meta name="description" content="Agentic image generation with primitive drawing tools: no image model, no assets, only code and drawing tools. Teaser video.">
+<style>
+  :root { --bg: #0e0f11; --fg: #f2f1ec; --muted: #9a9a94; --rule: #2a2b2e; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  body { font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+         padding: 24px max(16px, env(safe-area-inset-left, 0px)) 32px max(16px, env(safe-area-inset-right, 0px)); gap: 20px; }
+  h1 { font-weight: 600; font-size: clamp(20px, 2.6vw, 30px); line-height: 1.2; margin: 0; text-align: center; max-width: 30ch; text-wrap: balance; }
+  .video { width: min(100%, 1280px); aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+  video { display: block; width: 100%; height: 100%; }
+  p { margin: 0; color: var(--muted); font-size: 14px; text-align: center; max-width: 60ch; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+  <h1>How Far Can Coding Agents Go in Visual Generation?</h1>
+  <div class="video">
+    <video src="teaser.mp4" controls autoplay muted loop playsinline preload="auto" poster=""></video>
+  </div>
+  <p>No image model. No assets. Only code and drawing tools. Website and code coming soon.</p>
+</body>
+</html>
