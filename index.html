@@ -4,26 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How Far Can Coding Agents Go in Visual Generation?</title>
-<meta name="description" content="Agentic image generation with primitive drawing tools: no image model, no assets, only code and drawing tools. Teaser video.">
+<meta name="description" content="Zero-shot drawing with coding agents: no image model, no assets, only code and drawing tools. Teaser video.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root { --bg: #0e0f11; --fg: #f2f1ec; --muted: #9a9a94; --rule: #2a2b2e; }
+  /* Same tokens and type as the teaser's title card (tools/teaser/teaser_v2.html, scene s8). */
+  :root { --paper: #fbfaf7; --ink: #1b1c1e; --ink2: #46494e; --muted: #7a7d82; --rule: #e1e2e4; --well: #f1f0ec;
+          --serif: "Source Serif 4", Georgia, "Times New Roman", serif; --sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif; }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--fg); }
-  body { font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-         min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
-         padding: 24px max(16px, env(safe-area-inset-left, 0px)) 32px max(16px, env(safe-area-inset-right, 0px)); gap: 20px; }
-  h1 { font-weight: 600; font-size: clamp(20px, 2.6vw, 30px); line-height: 1.2; margin: 0; text-align: center; max-width: 30ch; text-wrap: balance; }
-  .video { width: min(100%, 1280px); aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+  html, body { margin: 0; background: var(--paper); color: var(--ink); }
+  body { font: 16px/1.5 var(--sans); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+         padding: 40px max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px)); gap: 28px; }
+  header { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+  .eb { font: 600 13px/1.3 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  h1 { font: 600 clamp(28px, 4.2vw, 54px)/1.12 var(--serif); letter-spacing: -.01em; margin: 0; max-width: 22ch; text-wrap: balance; }
+  .ft { font: 400 clamp(16px, 1.6vw, 21px)/1.4 var(--sans); color: var(--ink2); margin: 0; }
+  .video { width: min(100%, 1280px); aspect-ratio: 16 / 9; background: var(--well); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden;
+           box-shadow: 0 1px 2px rgba(27,28,30,.06), 0 12px 40px rgba(27,28,30,.08); }
   video { display: block; width: 100%; height: 100%; }
-  p { margin: 0; color: var(--muted); font-size: 14px; text-align: center; max-width: 60ch; }
-  a { color: inherit; }
+  p.note { margin: 0; color: var(--muted); font-size: 14px; text-align: center; max-width: 60ch; }
 </style>
 </head>
 <body>
-  <h1>How Far Can Coding Agents Go in Visual Generation?</h1>
+  <header>
+    <div class="eb">Zero-shot drawing with coding agents</div>
+    <h1>How Far Can Coding Agents Go in Visual Generation?</h1>
+    <p class="ft">external and internal visual language of thought</p>
+  </header>
   <div class="video">
-    <video src="teaser.mp4" controls autoplay muted loop playsinline preload="auto" poster=""></video>
+    <video src="teaser.mp4" controls autoplay muted loop playsinline preload="auto"></video>
   </div>
-  <p>No image model. No assets. Only code and drawing tools. Website and code coming soon.</p>
+  <p class="note">No image model. No assets. Only code and drawing tools. Website and code coming soon.</p>
 </body>
 </html>
